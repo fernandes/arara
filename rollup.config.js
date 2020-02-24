@@ -1,5 +1,7 @@
 import babel from "rollup-plugin-babel"
+import commonjs from "rollup-plugin-commonjs"
 import uglify from "rollup-plugin-uglify"
+import resolve from "rollup-plugin-node-resolve"
 
 const uglifyOptions = {
   mangle: false,
@@ -10,12 +12,20 @@ const uglifyOptions = {
   }
 }
 
+const babelOptions = {
+  exclude: /node_modules/,
+  // We are using @babel/plugin-transform-runtime
+  runtimeHelpers: true,
+  configFile: './babel.config.js',
+};
+
 export default {
   input: "app/javascript/arara/index.js",
   output: {
     file: "app/assets/javascripts/arara.js",
     format: "umd",
     name: "Arara",
+    exports: 'named',
     globals: {
       '@material/checkbox': 'checkbox',
       '@material/chips': 'chips',
@@ -39,7 +49,9 @@ export default {
     },
   },
   plugins: [
-    babel(),
+    resolve(),
+    babel(babelOptions),
+    commonjs(),
     uglify(uglifyOptions),
   ],
   external: [

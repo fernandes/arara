@@ -1,0 +1,23 @@
+dist: trusty
+addons:
+  chrome: stable
+language: ruby
+cache:
+  bundler: true
+  yarn: true
+rvm:
+ - 2.5.3
+node_js:
+  - "12"
+before_install:
+  - nvm install 12
+  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.17.3
+  - export PATH=$HOME/.yarn/bin:$PATH
+env:
+  global:
+  - CHROME_HEADLESS=true
+before_script:
+  - yarn
+script:
+  - yarn test
+  - bin/rails test

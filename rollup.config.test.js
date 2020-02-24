@@ -1,11 +1,12 @@
 import babel from "rollup-plugin-babel"
+import commonjs from "rollup-plugin-commonjs"
 import resolve from "rollup-plugin-node-resolve"
 
 export default {
-  input: "test/javascript/src/test.js",
+  input: "test/javascript/src/index.js",
 
   output: {
-    file: "test/javascript/compiled/test.js",
+    file: "test/javascript/compiled/index.js",
     format: "umd",
     globals: {
       '@material/checkbox': 'checkbox',
@@ -32,7 +33,10 @@ export default {
 
   plugins: [
     resolve(),
-    babel()
+    babel({
+      exclude: "node_modules/**"
+    }),
+    commonjs()
   ],
 
   external: [

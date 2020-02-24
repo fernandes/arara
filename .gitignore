@@ -9,7 +9,9 @@ test/dummy/storage/
 test/dummy/tmp/
 test/dummy/public/packs
 node_modules
-test/javascript/compiled/
-app/assets/javascripts/arara.js
 tmp/
-src/
+/src
+/app/assets/javascripts/arara.js
+/test/javascript/compiled/index.js
+yarn-error.log
+/build
