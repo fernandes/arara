@@ -1,0 +1,71 @@
+<div data-controller="demo-dialog">
+  <%= render(Arara::TypographyComponent, tag: "h3", variant: "sub1", content: "First Dialog") %>
+  <%= render(Arara::ButtonComponent, content: "Open First Dialog", data: { target: 'demo-dialog.button', action: "click->demo-dialog#openDialog" }) %>
+
+  <%= render(Arara::DialogComponent, data: { target: "demo-dialog.dialog" }, labelledby: "my-dialog-title", describedby: "my-dialog-content") do %>
+    <%= render(Arara::DialogTitleComponent, id: "my-dialog-title") { "Dialog Title" } %>
+    <%= render(Arara::DialogContentComponent, id: "my-dialog-content") do %>
+      Dialog body text goes here.
+    <% end %>
+    <%= render(Arara::DialogFooterComponent) do %>
+      <%= render(Arara::DialogButtonComponent, dialog_action: "no") { "No" } %>
+      <%= render(Arara::DialogButtonComponent, dialog_action: "yes") { "Yes" } %>
+    <% end %>
+  <% end %>
+</div>
+
+<div data-controller="demo-dialog">
+  <%= render(Arara::TypographyComponent, tag: "h3", variant: "sub1", content: "Simple Dialog") %>
+  <%= render(Arara::ButtonComponent, content: "Open Simple Dialog", data: { target: 'demo-dialog.button', action: "click->demo-dialog#openDialog" }) %>
+
+  <%= render(Arara::DialogComponent, data: { target: "demo-dialog.dialog" }, labelledby: "my-dialog-title", describedby: "my-dialog-content") do %>
+      <%= render(Arara::DialogTitleComponent, id: "my-dialog-title") { "Choose a Ringtone" } %>
+      <%= render(Arara::DialogContentComponent, id: "my-dialog-content") do %>
+        <ul class="mdc-list mdc-list--avatar-list">
+          <li class="mdc-list-item" tabindex="0" data-mdc-dialog-action="none">
+            <span class="mdc-list-item__text">None</span>
+          </li>
+          <li class="mdc-list-item" data-mdc-dialog-action="callisto">
+            <span class="mdc-list-item__text">Callisto</span>
+          </li>
+          <!-- ... -->
+        </ul>
+      <% end %>
+    <% end %>
+</div>
+
+<div data-controller="demo-dialog">
+  <%= render(Arara::TypographyComponent, tag: "h3", variant: "sub1", content: "Confirmation Dialog") %>
+  <%= render(Arara::ButtonComponent, content: "Open Confirmation Dialog", data: { target: 'demo-dialog.button', action: "click->demo-dialog#openDialog" }) %>
+
+  <%= render(Arara::DialogComponent, data: { target: "demo-dialog.dialog" }, labelledby: "my-dialog-title", describedby: "my-dialog-content") do %>
+      <%= render(Arara::DialogTitleComponent, id: "my-dialog-title") { "Choose a Ringtone" } %>
+      <%= render(Arara::DialogContentComponent, id: "my-dialog-content") do %>
+        <ul class="mdc-list">
+          <li class="mdc-list-item" tabindex="0">
+            <span class="mdc-list-item__graphic">
+              <div class="mdc-radio">
+                <input class="mdc-radio__native-control"
+                       type="radio"
+                       id="test-dialog-baseline-confirmation-radio-1"
+                       name="test-dialog-baseline-confirmation-radio-group"
+                       checked>
+                <div class="mdc-radio__background">
+                  <div class="mdc-radio__outer-circle"></div>
+                  <div class="mdc-radio__inner-circle"></div>
+                </div>
+              </div>
+            </span>
+            <label id="test-dialog-baseline-confirmation-radio-1-label"
+                   for="test-dialog-baseline-confirmation-radio-1"
+                   class="mdc-list-item__text">None</label>
+          </li>
+          <!-- ... -->
+        </ul>
+      <% end %>
+      <%= render(Arara::DialogFooterComponent) do %>
+        <%= render(Arara::DialogButtonComponent, dialog_action: "close") { "Cancel" } %>
+        <%= render(Arara::DialogButtonComponent, dialog_action: "accept") { "OK" } %>
+      <% end %>
+  <% end %>
+</div>

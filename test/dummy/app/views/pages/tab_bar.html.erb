@@ -1,0 +1,119 @@
+<div>
+  <h3 class="mdc-typography--subtitle1">Tabs with icons next to labels</h3>
+  <div class="mdc-tab-bar" role="tablist" data-controller="mdc-tab-bar">
+    <div class="mdc-tab-scroller">
+      <div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll" style="margin-bottom: 0px;">
+        <div class="mdc-tab-scroller__scroll-content">
+          <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0" id="mdc-tab-4">
+            <span class="mdc-tab__content">
+              <span class="mdc-tab__icon material-icons" aria-hidden="true">access_time</span>
+              <span class="mdc-tab__text-label">Recents</span>
+            </span>
+            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+              <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+            </span>
+            <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
+          </button>
+          <button class="mdc-tab" role="tab" aria-selected="false" tabindex="-1" id="mdc-tab-5">
+            <span class="mdc-tab__content">
+              <span class="mdc-tab__icon material-icons" aria-hidden="true">near_me</span>
+              <span class="mdc-tab__text-label">Nearby</span>
+            </span>
+            <span class="mdc-tab-indicator">
+              <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+            </span>
+            <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
+          </button>
+          <button class="mdc-tab" role="tab" aria-selected="false" tabindex="-1" id="mdc-tab-6">
+            <span class="mdc-tab__content">
+              <span class="mdc-tab__icon material-icons" aria-hidden="true">favorite</span>
+              <span class="mdc-tab__text-label">Favorites</span>
+            </span>
+            <span class="mdc-tab-indicator">
+              <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+            </span>
+            <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 class="mdc-typography--subtitle1">Tabs with icons above labels and indicators restricted to content</h3>
+  <div class="mdc-tab-bar" role="tablist" data-controller="mdc-tab-bar">
+    <div class="mdc-tab-scroller">
+      <div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll" style="margin-bottom: 0px;">
+        <div class="mdc-tab-scroller__scroll-content">
+          <button class="mdc-tab mdc-tab--active mdc-tab--stacked" role="tab" aria-selected="true" tabindex="0" id="mdc-tab-7">
+            <span class="mdc-tab__content">
+              <span class="mdc-tab__icon material-icons" aria-hidden="true">access_time</span>
+              <span class="mdc-tab__text-label">Recents</span>
+              <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+            </span>
+            <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
+          </button>
+          <button class="mdc-tab mdc-tab--stacked" role="tab" aria-selected="false" tabindex="-1" id="mdc-tab-8">
+            <span class="mdc-tab__content">
+              <span class="mdc-tab__icon material-icons" aria-hidden="true">near_me</span>
+              <span class="mdc-tab__text-label">Nearby</span>
+              <span class="mdc-tab-indicator">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+            </span>
+            <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
+          </button>
+          <button class="mdc-tab mdc-tab--stacked" role="tab" aria-selected="false" tabindex="-1" id="mdc-tab-9">
+            <span class="mdc-tab__content">
+              <span class="mdc-tab__icon material-icons" aria-hidden="true">favorite</span>
+              <span class="mdc-tab__text-label">Favorites</span>
+              <span class="mdc-tab-indicator">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+            </span>
+            <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 class="mdc-typography--subtitle1">Scrolling tabs</h3>
+  <div class="mdc-tab-bar" role="tablist" data-controller="mdc-tab-bar">
+    <div class="mdc-tab-scroller">
+      <div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll" style="margin-bottom: 0px;">
+        <div class="mdc-tab-scroller__scroll-content">
+          <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0" id="mdc-tab-10">
+            <span class="mdc-tab__content">
+              <span class="mdc-tab__text-label">Tab One</span>
+            </span>
+            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+              <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+            </span>
+            <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
+          </button>
+          <button class="mdc-tab" role="tab" aria-selected="false" tabindex="-1" id="mdc-tab-11">
+            <span class="mdc-tab__content">
+              <span class="mdc-tab__text-label">Tab Two</span>
+            </span>
+            <span class="mdc-tab-indicator">
+              <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+            </span>
+            <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
+          </button>
+          <% 3.upto(12) do |n| %>
+            <% words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'] %>
+            <button class="mdc-tab" role="tab" aria-selected="false" tabindex="-1" id="mdc-tab-<%= n + 9 %>">
+              <span class="mdc-tab__content">
+                <span class="mdc-tab__text-label">Tab <%= words[n] %></span>
+              </span>
+              <span class="mdc-tab-indicator">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
+            </button>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

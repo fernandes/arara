@@ -1,0 +1,14 @@
+.mdc-button {
+  height: 36px;
+}
+
+.demo-button {
+  margin: 8px 16px;
+}
+
+.demo-button-shaped {
+  border-radius: 18px;
+}
+.demo-button-shaped .mdc-button__ripple {
+  border-radius: 18px;
+}

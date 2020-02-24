@@ -1,0 +1,22 @@
+// Workaround to make Ripple work
+// https://github.com/tailwindcss/tailwindcss/issues/938#issuecomment-495935593
+* {
+  border-width: 1px;
+  border-style: none;
+
+  &::before {
+    border-width: 1px;
+    border-style: none;
+  }
+
+  &::after {
+    border-width: 1px;
+    border-style: none;
+  }
+}
+
+.mdc-icon-button, .mdc-button, .mdc-tab {
+  &:focus {
+    outline: 0;
+  }
+}

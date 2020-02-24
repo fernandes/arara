@@ -1,0 +1,8 @@
+<%= content_tag(html_tag, html_options) do %>
+  <div class="mdc-dialog__container">
+    <%= content_tag("div", surface_options) do %>
+      <%= content %>
+    <% end %>
+  </div>
+  <div class="mdc-dialog__scrim"></div>
+<% end %>

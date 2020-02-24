@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.authors     = ["Celso Fernandes"]
   spec.email       = ["celso.fernandes@gmail.com"]
   spec.homepage    = "https://github.com/fernandes/arara"
-  spec.summary     = "Arara: A material design theme for rails"
-  spec.description = "Arara is a material design based theme for Rails, using stimulus for JS and ActionView Components for its components" 
+  spec.summary     = "A material design theme for Ruby on Rails"
+  spec.description = "Material Design based theme for Ruby on Rails, using stimulus for JS and ActionView Components for its components" 
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -26,6 +26,7 @@ Gem::Specification.new do |spec|
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   spec.add_dependency "rails", "~> 6.0.2", ">= 6.0.2.1"
+  spec.add_dependency "actionview-component", "~> 1"
 
   spec.add_development_dependency "sqlite3"
 end

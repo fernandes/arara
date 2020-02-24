@@ -1,0 +1,39 @@
+{
+  "name": "dummy",
+  "private": true,
+  "dependencies": {
+    "@material/button": "^4.0.0",
+    "@material/card": "^4.0.0",
+    "@material/checkbox": "^4.0.0",
+    "@material/chips": "^4.0.0",
+    "@material/data-table": "^4.0.0",
+    "@material/density": "^4.0.0",
+    "@material/dialog": "^4.0.0",
+    "@material/elevation": "^4.0.0",
+    "@material/fab": "^4.0.0",
+    "@material/form-field": "^4.0.0",
+    "@material/icon-button": "^4.0.0",
+    "@material/image-list": "^4.0.0",
+    "@material/layout-grid": "^4.0.0",
+    "@material/linear-progress": "^4.0.0",
+    "@material/menu": "^4.0.0",
+    "@material/radio": "^4.0.0",
+    "@material/select": "^4.0.0",
+    "@material/slider": "^4.0.0",
+    "@material/snackbar": "^4.0.0",
+    "@material/switch": "^4.0.0",
+    "@material/tab-bar": "^4.0.0",
+    "@material/textfield": "^4.0.0",
+    "@material/top-app-bar": "^4.0.0",
+    "@material/typography": "^4.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "4.2.2",
+    "arara": "../../",
+    "stimulus": "^1.1.1",
+    "tailwindcss": "^1.1.4",
+    "turbolinks": "^5.2.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.10.3"
+  }
+}

@@ -1,0 +1,47 @@
+<div data-controller="<%= data_controller %>">
+  <%= content_tag(html_tag, html_options) do %>
+    <%= leading_icon %>
+    <% if textarea %>
+      <% if max_length && textarea %>
+        <div class="mdc-text-field-character-counter">0 / <%= max_length %></div>
+      <% end %>
+      <%= content_tag(html_input_tag, value, html_input_options) %>
+    <% else %>
+      <%= tag(html_input_tag, html_input_options) %>
+    <% end %>
+
+    <% if user_variant == "outlined" %>
+      <div class="mdc-notched-outline">
+        <div class="mdc-notched-outline__leading"></div>
+        <div class="mdc-notched-outline__notch">
+          <% if label %>
+            <label class="mdc-floating-label" for="<%= id %>"><%= label %></label>
+          <% end %>
+        </div>
+        <div class="mdc-notched-outline__trailing"></div>
+      </div>
+    <% else %>
+      <div class="mdc-line-ripple"></div>
+      <% if label && !full_width %>
+        <label class="mdc-floating-label" for="<%= id %>"><%= label %></label>
+      <% end %>
+    <% end %>
+    <%= trailing_icon %>
+  <% end %>
+  <% if !helper_text.blank? || (max_length && !textarea) %>
+  <div class="<%= helper_line_class %>" data-target="<%= data_controller %>.helperLine">
+    <% if helper_text %>
+      <p
+        class="<%= helper_text_class %>"
+        id="<%= id %>-helper"
+        aria-hidden="true"
+      >
+      <%= helper_text %>
+    </p>
+    <% end %>
+    <% if max_length && !textarea %>
+      <div class="mdc-text-field-character-counter">0 / <%= max_length %></div>
+    <% end %>
+  </div>
+  <% end %>
+</div>

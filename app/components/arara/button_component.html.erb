@@ -1,0 +1,7 @@
+<%= content_tag(html_tag, html_options) do %>
+  <span class="mdc-button__ripple"></span>
+  <% if has_icon? %>
+    <i class="material-icons mdc-button__icon"><%= icon %></i>
+  <% end %>
+  <span class="mdc-button__label"><%= html_content %></span>
+<% end %>

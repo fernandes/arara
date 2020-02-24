@@ -1,0 +1,32 @@
+<div>
+  <%= render(Arara::TypographyComponent, tag: "h3", variant: "sub1", content: "Standard Floating Action Button") %>
+  <%= render(Arara::FabComponent, label: "Favorite") do %>
+    <%= render(Arara::MaterialIconComponent, icon: 'favorite_border', class: "mdc-fab__icon") %>
+  <% end %>
+  <%= render(Arara::TypographyComponent, tag: "h3", variant: "sub1", content: "Mini Floating Action Button") %>
+  <%= render(Arara::FabComponent, variant: "mini", label: "Favorite") do %>
+    <%= render(Arara::MaterialIconComponent, icon: 'favorite_border', class: "mdc-fab__icon") %>
+  <% end %>
+  <%= render(Arara::TypographyComponent, tag: "h3", variant: "sub1", content: "Extended FAB") %>
+  <%= render(Arara::FabComponent, variant: "extended", label: "Create", extended_label: "Create") do %>
+    <%= render(Arara::MaterialIconComponent, icon: 'add', class: "mdc-fab__icon") %>
+  <% end %>
+  <%= render(Arara::TypographyComponent, tag: "h3", variant: "sub1", content: "Extended FAB (Text label followed by icon)") %>
+  <%= render(Arara::FabComponent, variant: "extended", label: "Create", extended_label: "Create", label_before: true) do %>
+    <%= render(Arara::MaterialIconComponent, icon: 'add', class: "mdc-fab__icon") %>
+  <% end %>
+  <%= render(Arara::TypographyComponent, tag: "h3", variant: "sub1", content: "Extended FAB (without Icon)") %>
+  <%= render(Arara::FabComponent, variant: "extended_no_icon", label: "Create", extended_label: "Create", no_icon: true) %>
+  <%= render(Arara::TypographyComponent, tag: "h3", variant: "sub1", content: "FAB (Shaped)") %>
+  <div class="demo-fab-shaped">
+    <%= render(Arara::FabComponent, label: "Favorite", class: "demo-fab-shaped--one") do %>
+      <%= render(Arara::MaterialIconComponent, icon: 'favorite_border', class: "mdc-fab__icon") %>
+    <% end %>
+    <%= render(Arara::FabComponent, variant: "mini", label: "Favorite", class: "demo-fab-shaped--two") do %>
+      <%= render(Arara::MaterialIconComponent, icon: 'favorite_border', class: "mdc-fab__icon") %>
+    <% end %>
+    <%= render(Arara::FabComponent, variant: "extended", label: "Create", extended_label: "Create", class: "demo-fab-shaped--three") do %>
+      <%= render(Arara::MaterialIconComponent, icon: 'add', class: "mdc-fab__icon") %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div>
+  <h3 class="mdc-typography--subtitle1">Anchored Menu</h3>
+  <div data-controller="mdc-menu">
+    <%= render(Arara::ButtonComponent, content: "Open Menu", data: { target: 'mdc-menu.button', action: "click->mdc-menu#openMenu" }) %>
+    <div class="mdc-menu-surface--anchor">
+      <%= render(Arara::MenuComponent, data: { target: 'mdc-menu.menu'}) do %>
+        <%= render(Arara::MenuItemComponent, content: "Passionfruit") %>
+        <%= render(Arara::MenuItemComponent, content: "Orange") %>
+        <%= render(Arara::MenuItemComponent, content: "Guava") %>
+        <%= render(Arara::MenuItemComponent, content: "Pitaya") %>
+        <%= render(Arara::MenuDividerComponent) %>
+        <%= render(Arara::MenuItemComponent, content: "Pineapple") %>
+        <%= render(Arara::MenuItemComponent, content: "Mango") %>
+        <%= render(Arara::MenuItemComponent, content: "Papaya") %>
+        <%= render(Arara::MenuItemComponent, content: "Lychee") %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<%= content_tag(html_tag, html_options) do %>
+  <%= options[:include_choice_hidden_field] && tag("input",
+          html_options.slice(:name, :id, :value).merge!("type" => "hidden", data: { target: 'rails-chip-set-choice.input' })  
+        ) %>
+  <%= content %>
+<% end %>

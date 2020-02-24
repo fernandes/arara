@@ -1,0 +1,32 @@
+<div>
+  <div>
+    <%= render(Arara::TypographyComponent, tag: "h3", variant: "sub1", content: "Text Button") %>
+    <%= render(Arara::ButtonComponent, content: "Default") %>
+    <%= render(Arara::ButtonComponent, content: "Dense", dense: true) %>
+    <%= render(Arara::ButtonComponent, content: "Icon", icon: "favorite") %>
+  </div>
+  <div>
+    <%= render(Arara::TypographyComponent, tag: "h3", variant: "sub1", content: "Raised Button") %>
+    <%= render(Arara::ButtonComponent, content: "Default", variant: "raised") %>
+    <%= render(Arara::ButtonComponent, content: "Dense", variant: "raised", dense: true) %>
+    <%= render(Arara::ButtonComponent, content: "Icon", variant: "raised", icon: "favorite") %>
+  </div>
+  <div>
+    <%= render(Arara::TypographyComponent, tag: "h3", variant: "sub1", content: "Unelevated Button") %>
+    <%= render(Arara::ButtonComponent, content: "Default", variant: "unelevated") %>
+    <%= render(Arara::ButtonComponent, content: "Dense", variant: "unelevated", dense: true) %>
+    <%= render(Arara::ButtonComponent, content: "Icon", variant: "unelevated", icon: "favorite") %>
+  </div>
+  <div>
+    <%= render(Arara::TypographyComponent, tag: "h3", variant: "sub1", content: "Outlined Button") %>
+    <%= render(Arara::ButtonComponent, content: "Default", variant: "outlined") %>
+    <%= render(Arara::ButtonComponent, content: "Dense", variant: "outlined", dense: true) %>
+    <%= render(Arara::ButtonComponent, content: "Icon", variant: "outlined", icon: "favorite", data: {controller: 'foo', 'info-tag': nil}) %>
+  </div>
+  <div>
+    <%= render(Arara::TypographyComponent, tag: "h3", variant: "sub1", content: "Shaped Button") %>
+    <%= render(Arara::ButtonComponent, content: "Default", variant: "unelevated", class: "demo-button-shaped") %>
+    <%= render(Arara::ButtonComponent, content: "Dense", variant: "unelevated", dense: true, class: "demo-button-shaped") %>
+    <%= render(Arara::ButtonComponent, content: "Icon", variant: "unelevated", icon: "favorite", class: "demo-button-shaped") %>
+  </div>
+</div>

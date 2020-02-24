@@ -1,28 +1,28 @@
-# Arara
-Short description and motivation.
+# Arara 🦜
 
-## Usage
-How to use my plugin.
+## Browser Sync
 
-## Installation
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'arara'
-```
-
-And then execute:
 ```bash
-$ bundle
+browser-sync start --proxy localhost:3000 --files "app/views, app/concepts"
 ```
 
-Or install it yourself as:
-```bash
-$ gem install arara
+## Customizing Dynamically
+
+```css
+:root {
+  --base-color: #c6538c;
+}
+
+body {
+  background-color: var(--base-color);
+}
 ```
 
-## Contributing
-Contribution directions go here.
+```js
+var root = document.documentElement;
+root.style.setProperty('--base-color', "palevioletred")
+```
 
 ## License
+
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

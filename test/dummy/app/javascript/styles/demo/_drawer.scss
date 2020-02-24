@@ -1,0 +1,23 @@
+.drawer-demos-display {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 400px;
+}
+
+.drawer-demo {
+  display: inline-block;
+  -ms-flex: 1 1 80%;
+      flex: 1 1 80%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-height: 400px;
+  min-width: 400px;
+  padding: 15px;
+}
+
+.drawer-iframe {
+  width: 100%;
+  height: 400px;
+}

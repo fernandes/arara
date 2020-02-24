@@ -1,0 +1,15 @@
+<div>
+  <%= render(Arara::TypographyComponent, tag: 'h3', variant: "sub1", content: "Icon Button") %>
+  <div>
+    <%= render(Arara::IconButtonComponent) do %>
+      <%= render(Arara::MaterialIconComponent, icon: 'wifi') %>
+    <% end %>
+  </div>
+  <%= render(Arara::TypographyComponent, tag: 'h3', variant: "sub1", content: "Icon Toggle Button") %>
+  <div>
+    <%= render(Arara::IconButtonComponent, data: { controller: 'mdc-icon-toggle' }) do %>
+      <%= render(Arara::IconToggleComponent, title: 'favorite', on: true) %>
+      <%= render(Arara::IconToggleComponent, title: 'favorite_border') %>
+    <% end %>
+  </div>
+</div>

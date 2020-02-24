@@ -1,0 +1,82 @@
+<%= render(Arara::DataTableComponent, label: "Dessert calories") do %>
+  <%= render(Arara::DataTableHeaderComponent, label: "Dessert calories") do %>
+    <%= render(Arara::DataTableHeaderRowComponent) do %>
+      <%= render(Arara::DataTableHeaderCellComponent) { "Dessert" } %>
+      <%= render(Arara::DataTableHeaderCellComponent, numeric: true) { "Carbs (g)" } %>
+      <%= render(Arara::DataTableHeaderCellComponent, numeric: true) { "Protein (g)" } %>
+      <%= render(Arara::DataTableHeaderCellComponent) { "Comments" } %>
+    <% end %>
+  <% end %>
+  <%= render(Arara::DataTableBodyComponent) do %>
+    <%= render(Arara::DataTableBodyRowComponent) do %>
+      <%= render(Arara::DataTableBodyCellComponent) { "Frozen yogurt" } %>
+      <%= render(Arara::DataTableBodyCellComponent, numeric: true) { "24" } %>
+      <%= render(Arara::DataTableBodyCellComponent, numeric: true) { "4.0" } %>
+      <%= render(Arara::DataTableBodyCellComponent) { "Super tasty" } %>
+    <% end %>
+    <%= render(Arara::DataTableBodyRowComponent) do %>
+      <%= render(Arara::DataTableBodyCellComponent) { "Ice cream sandwich" } %>
+      <%= render(Arara::DataTableBodyCellComponent, numeric: true) { "37" } %>
+      <%= render(Arara::DataTableBodyCellComponent, numeric: true) { "4.33333333333" } %>
+      <%= render(Arara::DataTableBodyCellComponent) { "I like ice cream more" } %>
+    <% end %>
+    <%= render(Arara::DataTableBodyRowComponent) do %>
+      <%= render(Arara::DataTableBodyCellComponent) { "Eclair" } %>
+      <%= render(Arara::DataTableBodyCellComponent, numeric: true) { "24" } %>
+      <%= render(Arara::DataTableBodyCellComponent, numeric: true) { "6.0" } %>
+      <%= render(Arara::DataTableBodyCellComponent) { "New filing flavor" } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= render(Arara::DataTableComponent, label: "Dessert calories") do %>
+  <%= render(Arara::DataTableHeaderComponent) do %>
+    <%= render(Arara::DataTableHeaderRowComponent) do %>
+      <%= render(Arara::DataTableHeaderCheckboxComponent, selected: false, label: "Checkbox for header row selection") %>
+      <%= render(Arara::DataTableHeaderCellComponent) { "Status" } %>
+      <%= render(Arara::DataTableHeaderCellComponent) { "Signal name" } %>
+      <%= render(Arara::DataTableHeaderCellComponent) { "Severity" } %>
+      <%= render(Arara::DataTableHeaderCellComponent) { "Stage" } %>
+      <%= render(Arara::DataTableHeaderCellComponent, numeric: true) { "Time" } %>
+      <%= render(Arara::DataTableHeaderCellComponent) { "Roles" } %>
+    <% end %>
+  <% end %>
+  <%= render(Arara::DataTableBodyComponent) do %>
+    <%= render(Arara::DataTableBodyRowComponent, data: {'row-id': "u0 "}) do %>
+      <%= render(Arara::DataTableBodyCheckboxComponent, id: "u0") %>
+      <%= render(Arara::DataTableBodyCellComponent) { "Online" } %>
+      <%= render(Arara::DataTableBodyCellComponent, id: "u0") { "Arcus watch slowdown" } %>
+      <%= render(Arara::DataTableBodyCellComponent) { "Medium" } %>
+      <%= render(Arara::DataTableBodyCellComponent) { "Triaged" } %>
+      <%= render(Arara::DataTableBodyCellComponent, numeric: true) { "0:33" } %>
+      <%= render(Arara::DataTableBodyCellComponent) { "Allison Brie" } %>
+    <% end %>
+    <%= render(Arara::DataTableBodyRowComponent, data: {'row-id': "u1 "}, selected: true) do %>
+      <%= render(Arara::DataTableBodyCheckboxComponent, id: "u1", selected: true) %>
+      <%= render(Arara::DataTableBodyCellComponent) { "Offline" } %>
+      <%= render(Arara::DataTableBodyCellComponent, id: "u1") { "monarch: prod shared ares-managed-features-provider-heavy" } %>
+      <%= render(Arara::DataTableBodyCellComponent) { "Huge" } %>
+      <%= render(Arara::DataTableBodyCellComponent) { "Triaged" } %>
+      <%= render(Arara::DataTableBodyCellComponent, numeric: true) { "0:33" } %>
+      <%= render(Arara::DataTableBodyCellComponent) { "Brie Larson" } %>
+    <% end %>
+    <%= render(Arara::DataTableBodyRowComponent, data: {'row-id': "u2 "}, selected: true) do %>
+      <%= render(Arara::DataTableBodyCheckboxComponent, id: "u2", selected: true) %>
+      <%= render(Arara::DataTableBodyCellComponent) { "Online" } %>
+      <%= render(Arara::DataTableBodyCellComponent, id: "u2") { "monarch: prod shared ares-managed-features-provider-heavy" } %>
+      <%= render(Arara::DataTableBodyCellComponent) { "Minor" } %>
+      <%= render(Arara::DataTableBodyCellComponent) { "Not triaged" } %>
+      <%= render(Arara::DataTableBodyCellComponent, numeric: true) { "0:33" } %>
+      <%= render(Arara::DataTableBodyCellComponent) { "Jeremy Lake" } %>
+    <% end %>
+    <%= render(Arara::DataTableBodyRowComponent, data: {'row-id': "u3"}) do %>
+      <%= render(Arara::DataTableBodyCheckboxComponent, id: "u3") %>
+      <%= render(Arara::DataTableBodyCellComponent) { "Online" } %>
+      <%= render(Arara::DataTableBodyCellComponent, id: "u3") { "Arcus watch slowdown" } %>
+      <%= render(Arara::DataTableBodyCellComponent) { "Negligible" } %>
+      <%= render(Arara::DataTableBodyCellComponent) { "Triaged" } %>
+      <%= render(Arara::DataTableBodyCellComponent, numeric: true) { "0:33" } %>
+      <%= render(Arara::DataTableBodyCellComponent) { "Angelina Cheng" } %>
+    <% end %>
+  <% end %>
+<% end %>

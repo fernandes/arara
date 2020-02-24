@@ -1,0 +1,170 @@
+<%= render(Arara::CardComponent, class: "demo-card") do %>
+  <%= render(Arara::CardPrimaryContentComponent, class: "demo-card__primary-action", data: { controller: 'mdc-ripple' }) do %>
+    <%= render(Arara::CardMediaComponent, variant: "wide", image_url: "https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg", class: "demo-card__media") %>
+    <div class="demo-card__primary">
+      <%= render(Arara::TypographyComponent, class: "demo-card__title", tag: "h2", variant: "h6", content: "Our Changing Planet") %>
+      <%= render(Arara::TypographyComponent, class: "demo-card__subtitle", tag: "h3", variant: "sub2", content: "by Kurt Wagner") %>
+    </div>
+    <%= render(Arara::TypographyComponent, class: "demo-card__secondary", tag: "div", variant: "body2") do %>
+      Visit ten places on our planet that are undergoing the biggest changes today.
+    <% end %>
+  <% end %>
+  <%= render(Arara::CardActionsComponent) do %>
+    <%= render(Arara::CardActionButtonsComponent) do %>
+      <%= render(Arara::ButtonComponent, content: "Read", class: "mdc-card__action mdc-card__action--button") %>
+      <%= render(Arara::ButtonComponent, content: "Bookmark", class: "mdc-card__action mdc-card__action--button") %>
+    <% end %>
+    <%= render(Arara::CardActionIconsComponent) do %>
+      <%= render(Arara::IconButtonComponent, title: "Add to favorites", data: { controller: 'mdc-icon-toggle' }) do %>
+        <%= render(Arara::IconToggleComponent, title: 'favorite', on: true) %>
+        <%= render(Arara::IconToggleComponent, title: 'favorite_border') %>
+      <% end %>
+      <%= render(Arara::IconButtonComponent, title: "Share") do %>
+        <%= render(Arara::MaterialIconComponent, icon: 'share') %>
+      <% end %>
+      <%= render(Arara::IconButtonComponent, title: "More Options") do %>
+        <%= render(Arara::MaterialIconComponent, icon: 'more_vert') %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= render(Arara::CardComponent, class: "demo-card demo-basic-with-text-over-media") do %>
+  <%= render(Arara::CardPrimaryContentComponent, class: "demo-card__primary-action", data: { controller: 'mdc-ripple' }) do %>
+    <%= render(Arara::CardMediaComponent, variant: "wide", image_url: "https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg", class: "demo-card__media") do %>
+      <%= render(Arara::CardMediaContentComponent, class: "demo-card__media-content") do %>
+        <div class="demo-card__primary">
+          <%= render(Arara::TypographyComponent, class: "demo-card__title", tag: "h2", variant: "h6", content: "Our Changing Planet") %>
+          <%= render(Arara::TypographyComponent, class: "demo-card__subtitle", tag: "h3", variant: "sub2", content: "by Kurt Wagner") %>
+        </div>
+      <% end %>
+    <% end %>
+    <%= render(Arara::TypographyComponent, class: "demo-card__secondary", tag: "div", variant: "body2") do %>
+      Visit ten places on our planet that are undergoing the biggest changes today.
+    <% end %>
+  <% end %>
+  <%= render(Arara::CardActionsComponent) do %>
+    <%= render(Arara::CardActionButtonsComponent) do %>
+      <%= render(Arara::ButtonComponent, content: "Read", class: "mdc-card__action mdc-card__action--button") %>
+      <%= render(Arara::ButtonComponent, content: "Bookmark", class: "mdc-card__action mdc-card__action--button") %>
+    <% end %>
+    <%= render(Arara::CardActionIconsComponent) do %>
+      <%= render(Arara::IconButtonComponent, title: "Add to favorites", data: { controller: 'mdc-icon-toggle' }) do %>
+        <%= render(Arara::IconToggleComponent, title: 'favorite', on: true) %>
+        <%= render(Arara::IconToggleComponent, title: 'favorite_border') %>
+      <% end %>
+      <%= render(Arara::IconButtonComponent, title: "Share") do %>
+        <%= render(Arara::MaterialIconComponent, icon: 'share') %>
+      <% end %>
+      <%= render(Arara::IconButtonComponent, title: "More Options") do %>
+        <%= render(Arara::MaterialIconComponent, icon: 'more_vert') %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= render(Arara::CardComponent, class: "demo-card demo-basic-with-header") do %>
+  <div class="demo-card__primary">
+    <%= render(Arara::TypographyComponent, class: "demo-card__title", tag: "h2", variant: "h6", content: "Our Changing Planet") %>
+    <%= render(Arara::TypographyComponent, class: "demo-card__subtitle", tag: "h3", variant: "sub2", content: "by Kurt Wagner") %>
+  </div>
+  <%= render(Arara::CardPrimaryContentComponent, class: "demo-card__primary-action", data: { controller: 'mdc-ripple' }) do %>
+    <%= render(Arara::CardMediaComponent, variant: "wide", image_url: "https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg", class: "demo-card__media") %>
+    <%= render(Arara::TypographyComponent, class: "demo-card__secondary", tag: "div", variant: "body2") do %>
+      Visit ten places on our planet that are undergoing the biggest changes today.
+    <% end %>
+  <% end %>
+  <%= render(Arara::CardActionsComponent) do %>
+    <%= render(Arara::CardActionButtonsComponent) do %>
+      <%= render(Arara::ButtonComponent, content: "Read", class: "mdc-card__action mdc-card__action--button") %>
+      <%= render(Arara::ButtonComponent, content: "Bookmark", class: "mdc-card__action mdc-card__action--button") %>
+    <% end %>
+    <%= render(Arara::CardActionIconsComponent) do %>
+      <%= render(Arara::IconButtonComponent, title: "Add to favorites", data: { controller: 'mdc-icon-toggle' }) do %>
+        <%= render(Arara::IconToggleComponent, title: 'favorite', on: true) %>
+        <%= render(Arara::IconToggleComponent, title: 'favorite_border') %>
+      <% end %>
+      <%= render(Arara::IconButtonComponent, title: "Share") do %>
+        <%= render(Arara::MaterialIconComponent, icon: 'share') %>
+      <% end %>
+      <%= render(Arara::IconButtonComponent, title: "More Options") do %>
+        <%= render(Arara::MaterialIconComponent, icon: 'more_vert') %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<% render(Arara::CardComponent, class: "demo-card") do %>
+  <%= render(Arara::CardPrimaryContentComponent, class: "demo-card__primary-action", data: { controller: 'mdc-ripple' }) do %>
+    <%= render(Arara::CardMediaComponent, variant: "wide", image_url: "https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg", class: "demo-card__media") %>
+    <div class="demo-card__primary">
+      <%= render(Arara::TypographyComponent, class: "demo-card__title", tag: "h2", variant: "h6", content: "Our Changing Planet") %>
+      <%= render(Arara::TypographyComponent, class: "demo-card__subtitle", tag: "h3", variant: "sub2", content: "by Kurt Wagner") %>
+    </div>
+    <%= render(Arara::TypographyComponent, class: "demo-card__secondary", tag: "div", variant: "body2") do %>
+      Visit ten places on our planet that are undergoing the biggest changes today.
+    <% end %>
+  <% end %>
+  <%= render(Arara::CardActionsComponent) do %>
+    <%= render(Arara::CardActionButtonsComponent) do %>
+      <%= render(Arara::ButtonComponent, content: "Read", class: "mdc-card__action mdc-card__action--button") %>
+      <%= render(Arara::ButtonComponent, content: "Bookmark", class: "mdc-card__action mdc-card__action--button") %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= render(Arara::CardComponent, class: "demo-card") do %>
+  <%= render(Arara::CardPrimaryContentComponent, class: "demo-card__primary-action", data: { controller: 'mdc-ripple' }) do %>
+    <%= render(Arara::CardMediaComponent, variant: "wide", image_url: "https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg", class: "demo-card__media") %>
+    <div class="demo-card__primary">
+      <%= render(Arara::TypographyComponent, class: "demo-card__title", tag: "h2", variant: "h6", content: "Our Changing Planet") %>
+      <%= render(Arara::TypographyComponent, class: "demo-card__subtitle", tag: "h3", variant: "sub2", content: "by Kurt Wagner") %>
+    </div>
+    <%= render(Arara::TypographyComponent, class: "demo-card__secondary", tag: "div", variant: "body2") do %>
+      Visit ten places on our planet that are undergoing the biggest changes today.
+    <% end %>
+  <% end %>
+  <%= render(Arara::CardActionsComponent) do %>
+    <%= render(Arara::CardActionIconsComponent) do %>
+      <%= render(Arara::IconButtonComponent, title: "Add to favorites", data: { controller: 'mdc-icon-toggle' }) do %>
+        <%= render(Arara::IconToggleComponent, title: 'favorite', on: true) %>
+        <%= render(Arara::IconToggleComponent, title: 'favorite_border') %>
+      <% end %>
+      <%= render(Arara::IconButtonComponent, title: "Share") do %>
+        <%= render(Arara::MaterialIconComponent, icon: 'share') %>
+      <% end %>
+      <%= render(Arara::IconButtonComponent, title: "More Options") do %>
+        <%= render(Arara::MaterialIconComponent, icon: 'more_vert') %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+
+
+<%= render(Arara::CardComponent, class: "demo-card demo-ui-control") do %>
+  <%= render(Arara::CardPrimaryContentComponent, class: "demo-card__primary-action", data: { controller: 'mdc-ripple' }) do %>
+    <%= render(Arara::CardMediaComponent, variant: "square", image_url: "https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg", class: "demo-card__media") %>
+    <div class="demo-card__primary">
+      <%= render(Arara::TypographyComponent, class: "demo-card__title", tag: "h2", variant: "h6", content: "Our Changing Planet") %>
+      <%= render(Arara::TypographyComponent, class: "demo-card__subtitle", tag: "h3", variant: "sub2", content: "by Kurt Wagner") %>
+    </div>
+  <% end %>
+  <%= render(Arara::CardActionsComponent) do %>
+    <%= render(Arara::CardActionButtonsComponent) do %>
+      <%= render(Arara::ButtonComponent, content: "Read", class: "mdc-card__action mdc-card__action--button") %>
+      <%= render(Arara::ButtonComponent, content: "Bookmark", class: "mdc-card__action mdc-card__action--button") %>
+    <% end %>
+    <%= render(Arara::CardActionIconsComponent) do %>
+      <%= render(Arara::IconButtonComponent, title: "Add to favorites", data: { controller: 'mdc-icon-toggle' }) do %>
+        <%= render(Arara::IconToggleComponent, title: 'favorite', on: true) %>
+        <%= render(Arara::IconToggleComponent, title: 'favorite_border') %>
+      <% end %>
+      <%= render(Arara::IconButtonComponent, title: "Share") do %>
+        <%= render(Arara::MaterialIconComponent, icon: 'share') %>
+      <% end %>
+      <%= render(Arara::IconButtonComponent, title: "More Options") do %>
+        <%= render(Arara::MaterialIconComponent, icon: 'more_vert') %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

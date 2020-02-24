@@ -1,0 +1,22 @@
+<%= content_tag(html_tag, html_options) do %>
+  <%= tag(:input, type: :hidden, id: id, name: name, value: selected_value, data: { target: 'mdc-select.input' }) %>
+  <div class="mdc-select__anchor custom-enhanced-select-width">
+    <i class="mdc-select__dropdown-icon"></i>
+    <div class="mdc-select__selected-text" tabindex="0" aria-disabled="false"><%= selected_label %></div>
+    <% if user_variant == "outlined" %>
+      <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+        <div class="mdc-notched-outline__leading"></div>
+        <div class="mdc-notched-outline__notch"><label id="outlined-label" class="mdc-floating-label" style=""><%= label %></label></div>
+        <div class="mdc-notched-outline__trailing"></div>
+      </div>
+    <% else %>
+      <span class="mdc-floating-label"><%= label %></span>
+      <div class="mdc-line-ripple"></div>
+    <% end %>
+  </div>
+  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-enhanced-select custom-enhanced-select-width">
+    <ul class="mdc-list">
+      <%= content %>
+    </ul>
+  </div>
+<% end %>

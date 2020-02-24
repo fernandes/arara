@@ -1,0 +1,69 @@
+<div>
+  <div class="select-row">
+    <div>
+      <%= render(Arara::TypographyComponent, tag: "h3", variant: "sub1", content: "Filled") %>
+      <%= render(Arara::SelectComponent, label: "Fruit") do %>
+        <%= render(Arara::SelectItemComponent, blank: true) %>
+        <%= render(Arara::SelectItemComponent, value: "apple", label: "Apple") %>
+        <%= render(Arara::SelectItemComponent, value: "orange", label: "Orange") %>
+        <%= render(Arara::SelectItemComponent, value: "banana", label: "Banana") %>
+      <% end %>
+    </div>
+  </div>
+  <div class="select-row">
+    <div>
+      <%= render(Arara::TypographyComponent, tag: "h3", variant: "sub1", content: "Outlined") %>
+      <%= render(Arara::SelectComponent, variant: "outlined", label: "Fruit") do %>
+        <%= render(Arara::SelectItemComponent, blank: true) %>
+        <%= render(Arara::SelectItemComponent, value: "apple", label: "Apple") %>
+        <%= render(Arara::SelectItemComponent, value: "orange", label: "Orange") %>
+        <%= render(Arara::SelectItemComponent, value: "banana", label: "Banana") %>
+      <% end %>
+    </div>
+  </div>
+  <div class="select-row">
+    <div>
+      <h3 class="mdc-typography--subtitle1">Shaped Filled</h3>
+      <div class="mdc-select" data-controller='mdc-select'>
+        <div class="mdc-select__anchor custom-enhanced-select-width mdc-ripple-upgraded">
+          <i class="mdc-select__dropdown-icon"></i>
+          <div class="mdc-select__selected-text" tabindex="0" aria-disabled="false"></div>
+          <span class="mdc-floating-label">Fruit</span>
+          <div class="mdc-line-ripple"></div>
+        </div>
+        <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-enhanced-select custom-enhanced-select-width ">
+          <ul class="mdc-list">
+            <li data-value="" disabled="" aria-selected="false" role="option" class="mdc-list-item" tabindex="-1"></li>
+            <li data-value="apple" aria-selected="false" role="option" class="mdc-list-item" tabindex="-1">Apple</li>
+            <li data-value="orange" aria-selected="false" role="option" class="mdc-list-item" tabindex="-1">Orange</li>
+            <li data-value="banana" aria-selected="false" role="option" class="mdc-list-item" tabindex="-1">Banana</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="select-row">
+    <div>
+      <h3 class="mdc-typography--subtitle1">Shaped Outlined</h3>
+      <div class="mdc-select mdc-select--outlined demo-enhanced-select" data-controller='mdc-select'>
+        <div class="mdc-select__anchor custom-enhanced-select-width">
+          <i class="mdc-select__dropdown-icon"></i>
+          <div id="demo-selected-text" class="mdc-select__selected-text" tabindex="0" aria-disabled="false"></div>
+          <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+            <div class="mdc-notched-outline__leading"></div>
+            <div class="mdc-notched-outline__notch"><label id="shaped_outlined-label" class="mdc-floating-label" style="">Fruit</label></div>
+            <div class="mdc-notched-outline__trailing"></div>
+          </div>
+        </div>
+        <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-enhanced-select custom-enhanced-select-width ">
+          <ul class="mdc-list">
+            <li data-value="" disabled="" aria-selected="false" role="option" class="mdc-list-item" tabindex="-1"></li>
+            <li data-value="apple" aria-selected="false" role="option" class="mdc-list-item" tabindex="-1">Apple</li>
+            <li data-value="orange" aria-selected="false" role="option" class="mdc-list-item" tabindex="-1">Orange</li>
+            <li data-value="banana" aria-selected="false" role="option" class="mdc-list-item" tabindex="-1">Banana</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

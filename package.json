@@ -1,0 +1,89 @@
+{
+  "name": "arara",
+  "version": "0.1.0",
+  "description": "A material design theme for Ruby on Rails",
+  "main": "app/assets/javascripts/arara.js",
+  "files": [
+    "app/assets/javascripts/*.js",
+    "src/*.scss",
+    "src/**/*.scss",
+    "src/*.js",
+    "src/**/*.js"
+  ],
+  "scripts": {
+    "prebuild": "yarn lint",
+    "build": "rollup --config rollup.config.js",
+    "lint": "eslint app/javascript",
+    "prepublishOnly": "rm -rf src && cp -R app/javascript/arara src",
+    "pretest": "rollup --config rollup.config.test.js",
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "fernandes/arara"
+  },
+  "keywords": [
+    "arara",
+    "material",
+    "design",
+    "stimulus",
+    "theme",
+    "js"
+  ],
+  "author": " <Celso Fernandes> (celso.fernandes@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fernandes/arara/issues"
+  },
+  "homepage": "https://github.com/fernandes/arara#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-external-helpers": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@material/button": "^4.0.0",
+    "@material/card": "^4.0.0",
+    "@material/checkbox": "^4.0.0",
+    "@material/chips": "^4.0.0",
+    "@material/data-table": "^4.0.0",
+    "@material/density": "^4.0.0",
+    "@material/dialog": "^4.0.0",
+    "@material/elevation": "^4.0.0",
+    "@material/fab": "^4.0.0",
+    "@material/form-field": "^4.0.0",
+    "@material/icon-button": "^4.0.0",
+    "@material/image-list": "^4.0.0",
+    "@material/layout-grid": "^4.0.0",
+    "@material/linear-progress": "^4.0.0",
+    "@material/menu": "^4.0.0",
+    "@material/radio": "^4.0.0",
+    "@material/select": "^4.0.0",
+    "@material/slider": "^4.0.0",
+    "@material/snackbar": "^4.0.0",
+    "@material/switch": "^4.0.0",
+    "@material/tab-bar": "^4.0.0",
+    "@material/textfield": "^4.0.0",
+    "@material/top-app-bar": "^4.0.0",
+    "@material/typography": "^4.0.0",
+    "@stimulus/test": "^1.1.1",
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-macros": "^2.8.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.7.0",
+    "karma": "^3.1.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-qunit": "^2.1.0",
+    "karma-sauce-launcher": "^1.2.0",
+    "mock-socket": "^2.0.0",
+    "qunit": "^2.8.0",
+    "rollup": "^0.58.2",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-scss": "^2.1.0",
+    "rollup-plugin-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "stimulus": "^1.1.1"
+  }
+}

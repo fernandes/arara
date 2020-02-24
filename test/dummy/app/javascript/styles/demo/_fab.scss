@@ -1,0 +1,42 @@
+.demo-fab-shaped {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.demo-fab-shaped--one {
+  margin-right: 24px;
+}
+.demo-fab-shaped--one:not(.mdc-fab--extended) {
+  /* @noflip */
+  border-radius: 50% 0;
+}
+[dir=rtl] .demo-fab-shaped--one:not(.mdc-fab--extended), .demo-fab-shaped--one:not(.mdc-fab--extended)[dir=rtl] {
+  /* @noflip */
+  border-radius: 0 50%;
+}
+.demo-fab-shaped--one:not(.mdc-fab--extended) .mdc-fab__ripple {
+  /* @noflip */
+  border-radius: 50% 0;
+}
+[dir=rtl] .demo-fab-shaped--one:not(.mdc-fab--extended) .mdc-fab__ripple, .demo-fab-shaped--one:not(.mdc-fab--extended) .mdc-fab__ripple[dir=rtl] {
+  /* @noflip */
+  border-radius: 0 50%;
+}
+
+.demo-fab-shaped--two {
+  margin-right: 24px;
+}
+.demo-fab-shaped--two:not(.mdc-fab--extended) {
+  border-radius: 8px;
+}
+.demo-fab-shaped--two:not(.mdc-fab--extended) .mdc-fab__ripple {
+  border-radius: 8px;
+}
+
+.demo-fab-shaped--three {
+  border-radius: 12px;
+  margin-right: 24px;
+}
+.demo-fab-shaped--three .mdc-fab__ripple {
+  border-radius: 12px;
+}

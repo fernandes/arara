@@ -1,0 +1,27 @@
+<%= content_tag(html_tag, html_options) do %>
+  <% if has_connector? %>
+    <%= content_tag(:div, connector_root_options) do %>
+      <% content_tag(:span, nil, connector_line_options) %>
+    <% end %>
+  <% end %>
+  <%= content_tag(:span, label_root_options) do %>
+    <%= content_tag(:span, icon_container_options) do %>
+      <%= content_tag(:svg, icon_options) do %>
+        <%= icon_tag %>
+      <% end %>
+    <% end %>
+    <span class="MuiStepLabel-labelContainer">
+      <%= content_tag(:span, step_label_options) do %>
+        <%= title %>
+      <% end %>
+      <% if sub_title %>
+        <span class="MuiTypography-root MuiTypography-caption"><%= sub_title %></span>
+      <% end %>
+    </span>
+  <% end %>
+  <div class="MuiStepContent-root" icon="1">
+    <% if has_vertical_content? %>
+    <%= html_content %>
+    <% end %>
+  </div>
+<% end %>

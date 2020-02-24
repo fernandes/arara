@@ -7,3 +7,9 @@ test/dummy/db/*.sqlite3-*
 test/dummy/log/*.log
 test/dummy/storage/
 test/dummy/tmp/
+test/dummy/public/packs
+node_modules
+test/javascript/compiled/
+app/assets/javascripts/arara.js
+tmp/
+src/

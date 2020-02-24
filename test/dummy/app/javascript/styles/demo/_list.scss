@@ -1,0 +1,19 @@
+.demo-list {
+  max-width: 600px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mdc-list--avatar-list .mdc-list-item__graphic {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.demo-list-item-shaped .mdc-list-item {
+  /* @noflip */
+  border-radius: 0 32px 32px 0;
+}
+[dir=rtl] .demo-list-item-shaped .mdc-list-item, .demo-list-item-shaped .mdc-list-item[dir=rtl] {
+  /* @noflip */
+  border-radius: 32px 0 0 32px;
+}
+

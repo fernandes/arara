@@ -1,0 +1,11 @@
+<div>
+  <%= render(Arara::TypographyComponent, tag: "h3", variant: "sub1", content: "Radio Buttons") %>
+  <%= render(Arara::FormFieldComponent, class: "demo-radio-form-field") do %>
+    <%= render(Arara::RadioButtonComponent, id: "0.3167030987981374", name: "demo-radio-set", value: "1", checked: true) %>
+    <label for="0.3167030987981374">Radio 1</label>
+  <% end %>
+  <%= render(Arara::FormFieldComponent, class: "demo-radio-form-field") do %>
+    <%= render(Arara::RadioButtonComponent, id: "0.2030608467092465", name: "demo-radio-set", value: "2") %>
+    <label for="0.2030608467092465">Radio 2</label>
+  <% end %>
+</div>

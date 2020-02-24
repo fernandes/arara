@@ -1,0 +1,27 @@
+.demos-display {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 200px;
+}
+
+.demo {
+  display: inline-block;
+  -ms-flex: 1 1 45%;
+      flex: 1 1 45%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-height: 200px;
+  min-width: 400px;
+  padding: 15px;
+}
+
+.frame {
+  width: 100%;
+  height: 200px;
+}
+
+.top-app-bar__frame {
+  height: 200vh;
+}

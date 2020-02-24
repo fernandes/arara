@@ -1,0 +1,69 @@
+.custom-enhanced-select-width {
+  width: 240px;
+}
+
+.demo-select-box-shaped .mdc-select__anchor {
+  border-radius: 17.92px 17.92px 0 0;
+}
+
+.demo-select-outline-shaped .mdc-notched-outline .mdc-notched-outline__leading {
+  /* @noflip */
+  border-radius: 28px 0 0 28px;
+  width: 28px;
+}
+[dir=rtl] .demo-select-outline-shaped .mdc-notched-outline .mdc-notched-outline__leading, .demo-select-outline-shaped .mdc-notched-outline .mdc-notched-outline__leading[dir=rtl] {
+  /* @noflip */
+  border-radius: 0 28px 28px 0;
+}
+.demo-select-outline-shaped .mdc-notched-outline .mdc-notched-outline__notch {
+  max-width: calc(100% - 28px * 2);
+}
+.demo-select-outline-shaped .mdc-notched-outline .mdc-notched-outline__trailing {
+  /* @noflip */
+  border-radius: 0 28px 28px 0;
+}
+[dir=rtl] .demo-select-outline-shaped .mdc-notched-outline .mdc-notched-outline__trailing, .demo-select-outline-shaped .mdc-notched-outline .mdc-notched-outline__trailing[dir=rtl] {
+  /* @noflip */
+  border-radius: 28px 0 0 28px;
+}
+.demo-select-outline-shaped .mdc-select__selected-text {
+  border-radius: 28px;
+}
+.demo-select-outline-shaped .mdc-select__selected-text {
+  /* @noflip */
+  padding-left: 32px;
+  /* @noflip */
+  padding-right: 52px;
+}
+[dir=rtl] .demo-select-outline-shaped .mdc-select__selected-text, .demo-select-outline-shaped .mdc-select__selected-text[dir=rtl] {
+  /* @noflip */
+  padding-left: 52px;
+  /* @noflip */
+  padding-right: 32px;
+}
+.demo-select-outline-shaped + .mdc-select-helper-text {
+  /* @noflip */
+  margin-left: 32px;
+  /* @noflip */
+  margin-right: 16px;
+}
+[dir=rtl] .demo-select-outline-shaped + .mdc-select-helper-text, .demo-select-outline-shaped + .mdc-select-helper-text[dir=rtl] {
+  /* @noflip */
+  margin-left: 16px;
+  /* @noflip */
+  margin-right: 32px;
+}
+
+.select-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.select-row .mdc-select {
+  margin-right: 5em;
+}

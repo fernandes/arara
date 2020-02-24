@@ -1,0 +1,2 @@
+module Arara::Tags
+end

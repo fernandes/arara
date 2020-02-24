@@ -1,0 +1,47 @@
+<div>
+  <div class="demo-slider">
+    <h3 class="mdc-typography--subtitle1">Continuous</h3>
+    <div class="mdc-slider" tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="50" aria-valuenow="25" aria-label="Select Value" data-controller='mdc-slider'>
+      <div class="mdc-slider__track-container">
+        <div class="mdc-slider__track" style="transform: scaleX(0.5);"></div>
+      </div>
+      <div class="mdc-slider__thumb-container" style="transform: translateX(600px) translateX(-50%);">
+        <svg class="mdc-slider__thumb" width="21" height="21">
+          <circle cx="10.5" cy="10.5" r="7.875"></circle>
+        </svg>
+        <div class="mdc-slider__focus-ring"></div>
+      </div>
+    </div>
+  </div>
+  <div class="demo-slider">
+    <h3 class="mdc-typography--subtitle1">Discrete</h3>
+    <div class="mdc-slider mdc-slider--discrete" tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="50" aria-valuenow="25" aria-label="Select Value" data-controller='mdc-slider'>
+      <div class="mdc-slider__track-container">
+        <div class="mdc-slider__track" style="transform: scaleX(0.5);"></div>
+      </div>
+      <div class="mdc-slider__thumb-container" style="transform: translateX(600px) translateX(-50%);">
+        <div class="mdc-slider__pin"><span class="mdc-slider__pin-value-marker"></span></div>
+        <svg class="mdc-slider__thumb" width="21" height="21">
+          <circle cx="10.5" cy="10.5" r="7.875"></circle>
+        </svg>
+        <div class="mdc-slider__focus-ring"></div>
+      </div>
+    </div>
+  </div>
+  <div class="demo-slider">
+    <h3 class="mdc-typography--subtitle1">Discrete with Tick Marks</h3>
+    <div class="mdc-slider mdc-slider--discrete mdc-slider--display-markers" tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="50" aria-valuenow="25" aria-label="Select Value" data-controller='mdc-slider'>
+      <div class="mdc-slider__track-container">
+        <div class="mdc-slider__track" style="transform: scaleX(0.5);"></div>
+        <div class="mdc-slider__track-marker-container" style="background: linear-gradient(to right, currentcolor 2px, transparent 0px) 0px center / calc((100% - 2px) / 50) 100% repeat-x;"></div>
+      </div>
+      <div class="mdc-slider__thumb-container" style="transform: translateX(600px) translateX(-50%);">
+        <div class="mdc-slider__pin"><span class="mdc-slider__pin-value-marker"></span></div>
+        <svg class="mdc-slider__thumb" width="21" height="21">
+          <circle cx="10.5" cy="10.5" r="7.875"></circle>
+        </svg>
+        <div class="mdc-slider__focus-ring"></div>
+      </div>
+    </div>
+  </div>
+</div>

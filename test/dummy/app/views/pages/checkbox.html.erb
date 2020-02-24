@@ -1,0 +1,16 @@
+<div>
+  <div class="mdc-form-field" data-controller="mdc-form-field">
+    <%= render(Arara::CheckboxComponent, id: "checkbox-1", name: "checkbox[1]") %>
+    <label for="checkbox-1">Uncheck</label>
+  </div>
+
+  <div class="mdc-form-field" data-controller="mdc-form-field">
+    <%= render(Arara::CheckboxComponent, id: "checkbox-2", name: "checkbox[1]", indeterminate: true) %>
+    <label for="checkbox-2">Indeterminate</label>
+  </div>
+
+  <div class="mdc-form-field" data-controller="mdc-form-field">
+    <%= render(Arara::CheckboxComponent, id: "checkbox-3", name: "checkbox[1]", checked: true) %>
+    <label for="checkbox-3">Checked</label>
+  </div>
+</div>

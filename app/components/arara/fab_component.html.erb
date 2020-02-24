@@ -1,0 +1,13 @@
+<%= content_tag(html_tag, html_options) do %>
+  <div class="mdc-fab__ripple"></div>
+  <% if user_variant == "extended" && label_before %>
+  <span class="mdc-fab__label"><%= extended_label %></span>
+  <% end %>
+  <%= content %>
+  <% if user_variant == "extended" && !label_before %>
+  <span class="mdc-fab__label"><%= extended_label %></span>
+  <% end %>
+  <% if user_variant == "extended_no_icon" %>
+  <span class="mdc-fab__label"><%= extended_label %></span>
+  <% end %>
+<% end %>

@@ -13,3 +13,8 @@
 //= require rails-ujs
 //= require activestorage
 //= require_tree .
+require("@rails/ujs").start();
+require("turbolinks").start();
+
+import "controllers"
+import '../styles/dummy.scss'

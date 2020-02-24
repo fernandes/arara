@@ -1,0 +1,114 @@
+<div>
+  <%= render(Arara::TypographyComponent, tag: "h3", variant: "sub1", content: "Choice Chips") %>
+  <%= render(Arara::ChipsetComponent, variant: "choice") do %>
+    <%= render(Arara::ChipComponent, id: "mdc-chip-5", label: "Extra Small") %>
+    <%= render(Arara::ChipComponent, id: "mdc-chip-6", label: "Small") %>
+    <%= render(Arara::ChipComponent, id: "mdc-chip-7", label: "Medium", selected: true) %>
+    <%= render(Arara::ChipComponent, id: "mdc-chip-8", label: "Large") %>
+    <%= render(Arara::ChipComponent, id: "mdc-chip-9", label: "Extra Large") %>
+  <% end %>
+
+  <%= render(Arara::TypographyComponent, tag: "h3", variant: "sub1", content: "Filter Chips") %>
+  <%= render(Arara::TypographyComponent, tag: "h3", variant: "body2", content: "No leading icon") %>
+  <%= render(Arara::ChipsetComponent, variant: "filter") do %>
+    <%= render(Arara::ChipComponent, variant: "filter", id: "mdc-chip-10", label: "Tops", selected: true) %>
+    <%= render(Arara::ChipComponent, variant: "filter", id: "mdc-chip-11", label: "Bottoms", selected: true) %>
+    <%= render(Arara::ChipComponent, variant: "filter", id: "mdc-chip-12", label: "Shoes") %>
+    <%= render(Arara::ChipComponent, variant: "filter", id: "mdc-chip-13", label: "Accessories") %>
+  <% end %>
+
+  <%= render(Arara::TypographyComponent, tag: "h3", variant: "body2", content: "With leading icon") %>
+  <%= render(Arara::ChipsetComponent, variant: "filter") do %>
+    <%= render(Arara::ChipComponent, variant: "filter", id: "mdc-chip-14", label: "Alice", selected: true) do |component| %>
+      <% component.with(:leading_icon) do %>
+        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading mdc-chip__icon--leading-hidden">face</i>
+      <% end %>
+    <% end %>
+    <%= render(Arara::ChipComponent, variant: "filter", id: "mdc-chip-15", label: "Bob") do |component| %>
+      <% component.with(:leading_icon) do %>
+        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">face</i>
+      <% end %>
+    <% end %>
+    <%= render(Arara::ChipComponent, variant: "filter", id: "mdc-chip-16", label: "Charlie") do |component| %>
+      <% component.with(:leading_icon) do %>
+        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">face</i>
+      <% end %>
+    <% end %>
+    <%= render(Arara::ChipComponent, variant: "filter", id: "mdc-chip-17", label: "Danielle") do |component| %>
+      <% component.with(:leading_icon) do %>
+        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">face</i>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= render(Arara::TypographyComponent, tag: "h3", variant: "body2", content: "With trailing icon") %>
+  <%= render(Arara::ChipsetComponent) do %>
+    <%= render(Arara::ChipComponent, id: "mdc-chip-18", label: "Alice", selected: true) do |component| %>
+      <% component.with(:leading_icon) do %>
+        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">face</i>
+      <% end %>
+      <% component.with(:trailing_icon) do %>
+        <i class="material-icons mdc-chip__icon mdc-chip__icon--trailing" tabindex="-1" role="button">close</i>
+      <% end %>
+    <% end %>
+    <%= render(Arara::ChipComponent, id: "mdc-chip-19", label: "Bob") do |component| %>
+      <% component.with(:leading_icon) do %>
+        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">face</i>
+      <% end %>
+      <% component.with(:trailing_icon) do %>
+        <i class="material-icons mdc-chip__icon mdc-chip__icon--trailing" tabindex="-1" role="button">close</i>
+      <% end %>
+    <% end %>
+    <%= render(Arara::ChipComponent, id: "mdc-chip-20", label: "Charlie") do |component| %>
+      <% component.with(:leading_icon) do %>
+        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">face</i>
+      <% end %>
+      <% component.with(:trailing_icon) do %>
+        <i class="material-icons mdc-chip__icon mdc-chip__icon--trailing" tabindex="-1" role="button">close</i>
+      <% end %>
+    <% end %>
+    <%= render(Arara::ChipComponent, id: "mdc-chip-21", label: "Danielle") do |component| %>
+      <% component.with(:leading_icon) do %>
+        <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">face</i>
+      <% end %>
+      <% component.with(:trailing_icon) do %>
+        <i class="material-icons mdc-chip__icon mdc-chip__icon--trailing" tabindex="-1" role="button">close</i>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <div class="catalog-variant">
+    <%= render(Arara::TypographyComponent, tag: "h3", variant: "sub1", content: "Action Chips") %>
+    <%= render(Arara::ChipsetComponent) do %>
+      <%= render(Arara::ChipComponent, id: "mdc-chip-22", label: "Add to calendar") do |component| %>
+        <% component.with(:leading_icon) do %>
+          <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">event</i>
+        <% end %>
+      <% end %>
+      <%= render(Arara::ChipComponent, id: "mdc-chip-23", label: "Bookmark") do |component| %>
+        <% component.with(:leading_icon) do %>
+          <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">bookmark</i>
+        <% end %>
+      <% end %>
+      <%= render(Arara::ChipComponent, id: "mdc-chip-24", label: "Set alarm") do |component| %>
+        <% component.with(:leading_icon) do %>
+          <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">alarm</i>
+        <% end %>
+      <% end %>
+      <%= render(Arara::ChipComponent, id: "mdc-chip-25", label: "Get directions") do |component| %>
+        <% component.with(:leading_icon) do %>
+          <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">directions</i>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="catalog-variant">
+    <%= render(Arara::TypographyComponent, tag: "h3", variant: "sub1", content: "Shaped Chips") %>
+    <%= render(Arara::ChipsetComponent, variant: "filter") do %>
+    <%= render(Arara::ChipComponent, id: "mdc-chip-26", label: "Bookcase", class: "demo-chip-shaped") %>
+    <%= render(Arara::ChipComponent, id: "mdc-chip-27", label: "TV Stand", class: "demo-chip-shaped") %>
+    <%= render(Arara::ChipComponent, id: "mdc-chip-28", label: "Sofas", class: "demo-chip-shaped") %>
+    <%= render(Arara::ChipComponent, id: "mdc-chip-29", label: "Office chairs", class: "demo-chip-shaped") %>
+  <% end %>
+</div>

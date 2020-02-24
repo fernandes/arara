@@ -1,14 +1,111 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Dummy</title>
+    <title>Arara</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
   </head>
 
-  <body>
-    <%= yield %>
+<style>
+
+/* md */
+@media (max-width: 768px) {
+  body:not(.menu--toggler) > .overlay{
+    z-index: 6;
+    background-color: black;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#nav_bar > .nav_bar__menu {
+  flex-shrink: 0;
+  flex-grow: 0;
+  z-index: 7;
+}
+
+#content {
+  margin-left: 0px;
+  overflow-y: auto;
+  display: block;
+  height: calc(100vh - 64px);
+  padding: 0 16px 20px;
+
+  transition: margin-left .25s cubic-bezier(0.4,0.0,0.2,1),visibility 0s linear .25s;
+}
+
+/* sm */
+@media (min-width: 640px) {
+  
+}
+
+/* md */
+@media (min-width: 768px) {
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  #content {
+    margin-left: 280px;
+  }
+
+  body.menu--toggler > #wrapper > #content {
+    margin-left: 280px;
+  }
+
+  body:not(.menu--toggler) > #wrapper > #content {
+    margin-left: 0px;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+}
+</style>
+
+  <body class="menu--toggler mdc-typography" style="overflow-y: hidden;">
+    <div id="wrapper">
+
+      <%= render(Arara::NavBarComponent) %>
+      <div id="content">
+        <%= yield %>
+      </div>
+    </div>
+    <div class="overlay" data-controller="body-class-toggler" data-action="click->body-class-toggler#toggle" data-body-class-toggler-class="menu--toggler">
   </body>
 </html>

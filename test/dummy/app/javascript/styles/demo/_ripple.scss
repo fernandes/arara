@@ -1,0 +1,246 @@
+.ripple-demos {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 1 1 45%;
+      flex: 1 1 45%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.ripple-demo-col {
+  min-width: 400px;
+}
+
+.ripple-demo-box,
+.ripple-demo-icon {
+  --mdc-ripple-fg-size: 0;
+  --mdc-ripple-left: 0;
+  --mdc-ripple-top: 0;
+  --mdc-ripple-fg-scale: 1;
+  --mdc-ripple-fg-translate-end: 0;
+  --mdc-ripple-fg-translate-start: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  outline: none;
+}
+.ripple-demo-box::before, .ripple-demo-box::after,
+.ripple-demo-icon::before,
+.ripple-demo-icon::after {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  content: "";
+}
+.ripple-demo-box::before,
+.ripple-demo-icon::before {
+  -webkit-transition: opacity 15ms linear, background-color 15ms linear;
+  -o-transition: opacity 15ms linear, background-color 15ms linear;
+  transition: opacity 15ms linear, background-color 15ms linear;
+  z-index: 1;
+}
+.ripple-demo-box.mdc-ripple-upgraded::before,
+.ripple-demo-icon.mdc-ripple-upgraded::before {
+  -webkit-transform: scale(var(--mdc-ripple-fg-scale, 1));
+      -ms-transform: scale(var(--mdc-ripple-fg-scale, 1));
+          transform: scale(var(--mdc-ripple-fg-scale, 1));
+}
+.ripple-demo-box.mdc-ripple-upgraded::after,
+.ripple-demo-icon.mdc-ripple-upgraded::after {
+  top: 0;
+  /* @noflip */
+  left: 0;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+}
+.ripple-demo-box.mdc-ripple-upgraded--unbounded::after,
+.ripple-demo-icon.mdc-ripple-upgraded--unbounded::after {
+  top: var(--mdc-ripple-top, 0);
+  /* @noflip */
+  left: var(--mdc-ripple-left, 0);
+}
+.ripple-demo-box.mdc-ripple-upgraded--foreground-activation::after,
+.ripple-demo-icon.mdc-ripple-upgraded--foreground-activation::after {
+  -webkit-animation: mdc-ripple-fg-radius-in 225ms forwards, mdc-ripple-fg-opacity-in 75ms forwards;
+          animation: mdc-ripple-fg-radius-in 225ms forwards, mdc-ripple-fg-opacity-in 75ms forwards;
+}
+.ripple-demo-box.mdc-ripple-upgraded--foreground-deactivation::after,
+.ripple-demo-icon.mdc-ripple-upgraded--foreground-deactivation::after {
+  -webkit-animation: mdc-ripple-fg-opacity-out 150ms;
+          animation: mdc-ripple-fg-opacity-out 150ms;
+  -webkit-transform: translate(var(--mdc-ripple-fg-translate-end, 0)) scale(var(--mdc-ripple-fg-scale, 1));
+      -ms-transform: translate(var(--mdc-ripple-fg-translate-end, 0)) scale(var(--mdc-ripple-fg-scale, 1));
+          transform: translate(var(--mdc-ripple-fg-translate-end, 0)) scale(var(--mdc-ripple-fg-scale, 1));
+}
+.ripple-demo-box::before, .ripple-demo-box::after,
+.ripple-demo-icon::before,
+.ripple-demo-icon::after {
+  background-color: #000;
+}
+.ripple-demo-box:hover::before,
+.ripple-demo-icon:hover::before {
+  opacity: 0.04;
+}
+.ripple-demo-box.mdc-ripple-upgraded--background-focused::before, .ripple-demo-box:not(.mdc-ripple-upgraded):focus::before,
+.ripple-demo-icon.mdc-ripple-upgraded--background-focused::before,
+.ripple-demo-icon:not(.mdc-ripple-upgraded):focus::before {
+  -webkit-transition-duration: 75ms;
+       -o-transition-duration: 75ms;
+          transition-duration: 75ms;
+  opacity: 0.12;
+}
+.ripple-demo-box:not(.mdc-ripple-upgraded)::after,
+.ripple-demo-icon:not(.mdc-ripple-upgraded)::after {
+  -webkit-transition: opacity 150ms linear;
+  -o-transition: opacity 150ms linear;
+  transition: opacity 150ms linear;
+}
+.ripple-demo-box:not(.mdc-ripple-upgraded):active::after,
+.ripple-demo-icon:not(.mdc-ripple-upgraded):active::after {
+  -webkit-transition-duration: 75ms;
+       -o-transition-duration: 75ms;
+          transition-duration: 75ms;
+  opacity: 0.12;
+}
+.ripple-demo-box.mdc-ripple-upgraded,
+.ripple-demo-icon.mdc-ripple-upgraded {
+  --mdc-ripple-fg-opacity: 0.12;
+}
+
+.ripple-demo-box {
+  -webkit-box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 200px;
+  height: 100px;
+  padding: 1rem;
+  cursor: pointer;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.ripple-demo-box::before, .ripple-demo-box::after {
+  top: calc(50% - 100%);
+  /* @noflip */
+  left: calc(50% - 100%);
+  width: 200%;
+  height: 200%;
+}
+.ripple-demo-box.mdc-ripple-upgraded::after {
+  width: var(--mdc-ripple-fg-size, 100%);
+  height: var(--mdc-ripple-fg-size, 100%);
+}
+
+.ripple-demo-box--primary {
+  color: #6200ee;
+  /* @alternate */
+  color: var(--mdc-theme-primary, #6200ee);
+}
+.ripple-demo-box--primary::before, .ripple-demo-box--primary::after {
+  background-color: #6200ee;
+}
+@supports not (-ms-ime-align: auto) {
+  .ripple-demo-box--primary::before, .ripple-demo-box--primary::after {
+    /* @alternate */
+    background-color: var(--mdc-theme-primary, #6200ee);
+  }
+}
+.ripple-demo-box--primary:hover::before {
+  opacity: 0.04;
+}
+.ripple-demo-box--primary.mdc-ripple-upgraded--background-focused::before, .ripple-demo-box--primary:not(.mdc-ripple-upgraded):focus::before {
+  -webkit-transition-duration: 75ms;
+       -o-transition-duration: 75ms;
+          transition-duration: 75ms;
+  opacity: 0.12;
+}
+.ripple-demo-box--primary:not(.mdc-ripple-upgraded)::after {
+  -webkit-transition: opacity 150ms linear;
+  -o-transition: opacity 150ms linear;
+  transition: opacity 150ms linear;
+}
+.ripple-demo-box--primary:not(.mdc-ripple-upgraded):active::after {
+  -webkit-transition-duration: 75ms;
+       -o-transition-duration: 75ms;
+          transition-duration: 75ms;
+  opacity: 0.12;
+}
+.ripple-demo-box--primary.mdc-ripple-upgraded {
+  --mdc-ripple-fg-opacity: 0.12;
+}
+
+.ripple-demo-box--secondary {
+  color: #018786;
+  /* @alternate */
+  color: var(--mdc-theme-secondary, #018786);
+}
+.ripple-demo-box--secondary::before, .ripple-demo-box--secondary::after {
+  background-color: #018786;
+}
+@supports not (-ms-ime-align: auto) {
+  .ripple-demo-box--secondary::before, .ripple-demo-box--secondary::after {
+    /* @alternate */
+    background-color: var(--mdc-theme-secondary, #018786);
+  }
+}
+.ripple-demo-box--secondary:hover::before {
+  opacity: 0.04;
+}
+.ripple-demo-box--secondary.mdc-ripple-upgraded--background-focused::before, .ripple-demo-box--secondary:not(.mdc-ripple-upgraded):focus::before {
+  -webkit-transition-duration: 75ms;
+       -o-transition-duration: 75ms;
+          transition-duration: 75ms;
+  opacity: 0.12;
+}
+.ripple-demo-box--secondary:not(.mdc-ripple-upgraded)::after {
+  -webkit-transition: opacity 150ms linear;
+  -o-transition: opacity 150ms linear;
+  transition: opacity 150ms linear;
+}
+.ripple-demo-box--secondary:not(.mdc-ripple-upgraded):active::after {
+  -webkit-transition-duration: 75ms;
+       -o-transition-duration: 75ms;
+          transition-duration: 75ms;
+  opacity: 0.12;
+}
+.ripple-demo-box--secondary.mdc-ripple-upgraded {
+  --mdc-ripple-fg-opacity: 0.12;
+}
+
+.ripple-demo-icon {
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  padding: 12px;
+  overflow: visible;
+}
+.ripple-demo-icon::before, .ripple-demo-icon::after {
+  top: calc(50% - 50%);
+  /* @noflip */
+  left: calc(50% - 50%);
+  width: 100%;
+  height: 100%;
+}
+.ripple-demo-icon.mdc-ripple-upgraded::before, .ripple-demo-icon.mdc-ripple-upgraded::after {
+  top: var(--mdc-ripple-top, calc(50% - 50%));
+  /* @noflip */
+  left: var(--mdc-ripple-left, calc(50% - 50%));
+  width: var(--mdc-ripple-fg-size, 100%);
+  height: var(--mdc-ripple-fg-size, 100%);
+}
+.ripple-demo-icon.mdc-ripple-upgraded::after {
+  width: var(--mdc-ripple-fg-size, 100%);
+  height: var(--mdc-ripple-fg-size, 100%);
+}
