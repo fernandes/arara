@@ -1,4 +1,4 @@
-export { default as sum } from "./sum.js"
+export { default as sum } from "./helpers/sum.js"
 export { default as body_class_toggler_controller } from "./controllers/body_class_toggler_controller.js"
 export { default as counter_controller } from "./controllers/counter_controller.js"
 export { default as demo_dialog_controller } from "./controllers/demo_dialog_controller.js"
