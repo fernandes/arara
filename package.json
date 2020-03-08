@@ -16,7 +16,7 @@
     "prepublishOnly": "rm -rf src && cp -R app/javascript/arara src",
     "pretest": "cross-env NODE_ENV=test BABEL_ENV=test rollup --config rollup.config.test.js",
     "test": "karma start",
-    "release": "yarn build && npm publish src --tag latest"
+    "release": "yarn build && npm publish build --tag latest"
   },
   "repository": {
     "type": "git",
