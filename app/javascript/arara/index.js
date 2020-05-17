@@ -1,6 +1,3 @@
-export { default as sum } from "./helpers/sum.js"
-export * from "./helpers/sum.js"
-
 export { default as body_class_toggler_controller } from "./controllers/body_class_toggler_controller.js"
 export * from "./controllers/body_class_toggler_controller.js"
 
