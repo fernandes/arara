@@ -32,6 +32,16 @@ All arara related files are inside `app/javascript/arara`, the folder contains:
 
 ### Demo
 
+TL;DR (quick setup)
+
+```bash
+yarn
+cd test/dummy
+yarn
+bundle install
+rails server
+```
+
 On project root run the `yarn` (or `npm`) command to install the dependencies for arara
 
 To run the demo, go inside `test/dummy` and run the commands:
