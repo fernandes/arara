@@ -12,7 +12,9 @@ module Arara
     end
 
     def default_html_class
-      'mdc-icon-button'
+      klasses = ['mdc-icon-button']
+      klasses << ['mdc-icon-button--on'] if pressed
+      klasses
     end
 
     def aria_data
