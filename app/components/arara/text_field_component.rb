@@ -1,12 +1,12 @@
 module Arara
   class TextFieldComponent < ActionView::Component::Base
     include Arara::BaseComponent
-    
-    attr_reader :label, :id, :name, :value, :textarea, :full_width, :helper_text, :type
+
+    attr_reader :label, :id, :name, :value, :textarea, :full_width, :helper_text, :type, :placeholder
 
     with_content_areas :leading_icon, :trailing_icon, :max_length
 
-    def initialize(variant: "default", label: nil, helper_text: nil, max_length: nil, textarea: false, id:, name: nil, value: nil, full_width: false, has_error: false, type: "text", **kw)
+    def initialize(variant: "default", label: nil, helper_text: nil, max_length: nil, textarea: false, id:, name: nil, value: nil, full_width: false, has_error: false, type: "text", placeholder: nil, **kw)
       super(tag: "div", variant: variant, **kw)
 
       @label = label
@@ -20,6 +20,7 @@ module Arara
       @has_error = has_error
       @user_variant = "outlined" if textarea
       @type = type
+      @placeholder = placeholder
     end
 
     def has_error?
@@ -48,7 +49,7 @@ module Arara
       return "textarea" if textarea
       "input"
     end
-    
+
     def html_input_options
       opts = {
         class: "mdc-text-field__input",
@@ -64,7 +65,7 @@ module Arara
       opts.merge!(value: value) if value
       opts[:data] = opts.has_key?(:data) ? opts[:data] : {}
       opts[:data][:action] = "focusin->#{data_controller}#handleFocus"
-      opts.merge!(placeholder: label) if full_width && !is_textarea?
+      opts.merge!(placeholder: placeholder) if placeholder
       # opts.merge!(rows: 4, cols: 40) if textarea
       opts.merge!(maxlength: max_length) if max_length
       opts
