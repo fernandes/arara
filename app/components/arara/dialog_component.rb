@@ -21,8 +21,10 @@ module Arara
     end
 
     def surface_options
+      html_class = ["mdc-dialog__surface"]
+      html_class << surface_class if surface_class
       {
-        class: "mdc-dialog__surface #{surface_class}",
+        class: html_class.join(" "),
         role: role,
         aria: {
           modal: "true",
