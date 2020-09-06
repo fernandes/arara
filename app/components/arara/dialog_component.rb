@@ -3,15 +3,16 @@ module Arara
     validates :content, presence: true
 
     include Arara::BaseComponent
-    
-    attr_reader :role, :labelledby, :describedby
 
-    def initialize(role: "alertdialog", labelledby:, describedby:, **kw)
+    attr_reader :role, :labelledby, :describedby, :surface_class
+
+    def initialize(role: "alertdialog", labelledby:, describedby:, surface_class: nil, **kw)
       super(tag: "div", role: role, **kw)
 
       @role = role
       @labelledby = labelledby
       @describedby = describedby
+      @surface_class = surface_class
     end
 
 
@@ -20,8 +21,10 @@ module Arara
     end
 
     def surface_options
-      opts = {
-        class: "mdc-dialog__surface",
+      html_class = ["mdc-dialog__surface"]
+      html_class << surface_class if surface_class
+      {
+        class: html_class.join(" "),
         role: role,
         aria: {
           modal: "true",
