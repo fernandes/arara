@@ -1,6 +1,6 @@
 {
   "name": "arara",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A material design theme for Ruby on Rails",
   "main": "./index.js",
   "module": "./esm/index.js",
