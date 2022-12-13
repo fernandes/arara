@@ -100,11 +100,11 @@ GEM
     mini_portile2 (2.8.0)
     minitest (5.15.0)
     nio4r (2.5.8)
-    nokogiri (1.13.3)
+    nokogiri (1.13.10)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     public_suffix (4.0.6)
-    racc (1.6.0)
+    racc (1.6.1)
     rack (2.2.3)
     rack-proxy (0.6.5)
       rack
